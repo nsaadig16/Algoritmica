@@ -1,0 +1,1 @@
+sumOfSquares ll = foldl (+) 0 (map (\x -> x^2) ll) 
