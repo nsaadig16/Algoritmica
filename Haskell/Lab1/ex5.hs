@@ -1,4 +1,4 @@
 rotateList n (x:xs)
-    | length (x:xs) `mod` n == 0 = (x:xs)
+    | n `mod` length (x:xs) == 0 = (x:xs)
     | n == 0 = x:xs
-    | otherwise = rotateList (na-1) (xs ++ [x])
+    | otherwise = rotateList (n-1) (xs ++ [x])
