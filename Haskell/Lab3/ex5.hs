@@ -2,7 +2,10 @@ data Tree a = Empty | Node a (Tree a) (Tree a)
 
 maxTree :: Tree Int -> Int
 maxTree Empty = minBound
+-- An empty node always gives the minimum value possible (minBound), so that every other node is bigger
 maxTree (Node a left right) = max a (max (maxTree left) (maxTree right))
+
+--We do the max between the root, the left subtree and the right subtree
 
 main :: IO()
 main = do

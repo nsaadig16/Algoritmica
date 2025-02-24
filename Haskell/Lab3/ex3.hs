@@ -5,6 +5,7 @@ isValueInTree n Empty = False
 isValueInTree n (Node a left right)
     | n == a = True
     | otherwise = isValueInTree n left || isValueInTree n right
+-- If it's in the tree stops, otherwise checks both in the left and the right one
 
 main :: IO()
 main = do

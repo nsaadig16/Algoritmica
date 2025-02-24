@@ -3,6 +3,7 @@ data Tree a = Empty | Node a (Tree a) (Tree a)
 treeToList :: Tree Int -> [Int]
 treeToList Empty = []
 treeToList (Node a left right) = treeToList left ++ [a] ++ treeToList right
+-- The in-order traversal is the left subtree -> the root -> the right subtree
 
 main :: IO()
 main = do
